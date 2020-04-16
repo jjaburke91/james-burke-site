@@ -1,0 +1,17 @@
+.section {
+    padding-bottom: 32px;
+}
+
+.section__title {
+    font-weight: bold;
+    margin-bottom: 18px;
+    margin-top: 0;
+}
+.section__content {
+    margin-left: 26px;
+
+    &:last-child {
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+}

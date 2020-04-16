@@ -1,0 +1,57 @@
+$typography-xl: 46px;
+$typography-l: 32px;
+$typography-m: 24px;
+$typography-s: 21px;
+
+/*****/
+
+* {
+    font-family: "Karla", Arial, 'sans-serif';
+}
+
+html {
+    font-size: 21px;
+}
+
+a {
+    color: black;
+
+    &:visited {
+        color: black;
+    }
+}
+
+.main {
+    margin: 120px auto;
+    width: 800px;
+}
+
+.page-head {
+    padding-bottom: 32px;
+}
+
+.title {
+    margin-bottom: 28px;
+}
+
+/* text */
+.text {}
+.text--xl {
+    font-size: $typography-xl;
+}
+.text--l {
+    font-size: $typography-l;
+}
+.text--m {
+    font-size: $typography-m;
+}
+.text--s {
+    font-size: $typography-s;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+.text-normal {
+    font-weight: normal;
+}
