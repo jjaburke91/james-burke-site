@@ -85,7 +85,7 @@ const IndexPage = () => (
         </Section>
 
         <div class="portrait-container" style={{margin: "28px 0 46px"}}>
-            <img src="/portrait.jpg" style={{width: "100%", opacity: 0.7}} />
+            <img src="portrait.jpg" style={{width: "100%", opacity: 0.7}} />
         </div>
 
         <div><a href={`mailto:${CONTACT_EMAIL}`} target="_blank" rel="noopener noreferrer">Get in touch</a></div>
