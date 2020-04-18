@@ -1,5 +1,7 @@
 import React from "react";
 import Helmet from "react-helmet";
+import { graphql } from 'gatsby';
+import Img from 'gatsby-image';
 
 import Section from '../components/section';
 import JobListing from '../components/jobListing';
@@ -27,7 +29,7 @@ const PROJECTS = [
     },
 ];
 
-const IndexPage = () => (
+const IndexPage = ({ data }) => (
     <div className="main">
         <Helmet>
             <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet" />
@@ -84,7 +86,10 @@ const IndexPage = () => (
         </Section>
 
         <div class="portrait-container" style={{margin: "28px 0 46px"}}>
-            <img src="portrait.jpg" style={{width: "100%", opacity: 0.8}} />
+            <Img
+              fluid={data.portraitImage.childImageSharp.fluid}
+              alt="This is a picture of my face."
+            />
         </div>
 
         <div><a href={`mailto:${CONTACT_EMAIL}`} target="_blank" rel="noopener noreferrer">Get in touch</a></div>
@@ -92,3 +97,15 @@ const IndexPage = () => (
 );
 
 export default IndexPage;
+
+export const query = graphql`
+  query {
+    portraitImage: file(relativePath: { eq: "images/portrait.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1200) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`

@@ -1,0 +1,10 @@
+{
+    jobs: [
+        {
+            role: '',
+            company: '',
+            startDate: '',
+            endDate: '',
+        }
+    ]
+}
